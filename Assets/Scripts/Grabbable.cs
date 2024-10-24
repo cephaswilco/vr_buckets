@@ -2,6 +2,7 @@ using Normal.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Grabbable : MonoBehaviour, IGrabbable  
 {
@@ -13,13 +14,18 @@ public class Grabbable : MonoBehaviour, IGrabbable
         realtimeTransform = GetComponent<RealtimeTransform>();
     }
 
-    public Transform Grab(Transform grabberTransform)
+    void Update()
+    {
+        
+    }
+
+    public Grabbable Grab(Transform grabberTransform)
     {
         if (!realtimeTransform.isOwnedLocallySelf || realtimeTransform.isOwnedRemotelySelf)
-        {
-            realtimeTransform.RequestOwnership();
+        {  
+            realtimeTransform.RequestOwnership();         
         }
-        return this.transform;
+        return this;
     }
 
     public void Release()
@@ -33,5 +39,5 @@ public class Grabbable : MonoBehaviour, IGrabbable
 
 public interface IGrabbable
 {
-    public Transform Grab(Transform transform);
+    public Grabbable Grab(Transform transform);
 }

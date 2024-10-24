@@ -690,9 +690,9 @@ PrefabInstance:
       propertyPath: _sceneViewPreventOwnershipTakeover
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 217605996591967049, guid: c2e471937a823064fa697125a6ecbbd1, type: 3}
-      propertyPath: m_Camera
-      value: 
+    - target: {fileID: 582091468161036044, guid: c2e471937a823064fa697125a6ecbbd1, type: 3}
+      propertyPath: handGripAnimationAction.m_Action.m_Name
+      value: Hand Grip Animation
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -740,7 +740,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616957520}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1d2ef58f50aec4c448b8c79c3c70f9e4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -762,8 +762,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616957520}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 0.2
+  m_Drag: 0.15
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -778,9 +778,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!4 &616957523
 Transform:
   m_ObjectHideFlags: 0
@@ -790,7 +790,7 @@ Transform:
   m_GameObject: {fileID: 616957520}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1495,7 +1495,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793234926}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: b1bd532bd7784e7429ee073b4181f2fb, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1569,7 +1569,7 @@ Transform:
   m_GameObject: {fileID: 1793234926}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.421153, y: -1.1344607, z: 5.570483}
+  m_LocalPosition: {x: 4.421153, y: -0.13446069, z: 5.570483}
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_ConstrainProportionsScale: 0
   m_Children:
