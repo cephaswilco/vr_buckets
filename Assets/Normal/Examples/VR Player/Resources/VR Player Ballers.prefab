@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 217605996591967049}
   - component: {fileID: 3447588241266759098}
   - component: {fileID: 8040741440570477733}
+  - component: {fileID: 4359486771210912886}
   m_Layer: 0
   m_Name: VR Player Ballers
   m_TagString: Untagged
@@ -575,6 +576,18 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &4359486771210912886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435502846325602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b9543c068298649812d8f683198123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1677690864260768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1083,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   baseRig: {fileID: 4736743072354544}
+  hapticFeedback: {fileID: 4359486771210912886}
 --- !u!65 &6159340893357486153
 BoxCollider:
   m_ObjectHideFlags: 0

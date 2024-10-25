@@ -19,6 +19,8 @@ public class ObjectGrabber : MonoBehaviour
     [SerializeField]
     Transform baseRig;
 
+    [SerializeField]
+    HapticFeedback hapticFeedback;
 
     bool gripped;
 
@@ -58,8 +60,8 @@ public class ObjectGrabber : MonoBehaviour
 
             if (gripValue <= 0f)
             {
+                hapticFeedback.TriggerRightHaptic(0.5f, 0.2f);
                 gripped = false;
-
 
                 RightControllerDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
@@ -92,6 +94,7 @@ public class ObjectGrabber : MonoBehaviour
             {
                 if (gripValue > 0)
                 {
+                    hapticFeedback.TriggerRightHaptic(0.7f, 0.35f);
                     gripped = true;
                     grabbedObject = grabbable.Grab(this.transform);
                     Debug.Log("Kinematic true");
