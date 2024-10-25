@@ -14,6 +14,9 @@ public class ObjectGrabber : MonoBehaviour
     float consecutiveGrip;
     float consecutiveGripThreshhold = 0.16f;
 
+    [SerializeField]
+    Transform baseRig;
+
 
     bool gripped;
 
@@ -59,7 +62,7 @@ public class ObjectGrabber : MonoBehaviour
                 RightControllerDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
                 RightControllerDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.deviceVelocity, out xrVelocity);
-                Vector3 velocity = xrVelocity;
+                Vector3 velocity = baseRig.rotation * xrVelocity;
                 Debug.Log("Velocity: "  + velocity);
                 Rigidbody grabbedObjectRigidBody = grabbedObject.GetComponent<Rigidbody>();
                 grabbedObjectRigidBody.isKinematic = false;

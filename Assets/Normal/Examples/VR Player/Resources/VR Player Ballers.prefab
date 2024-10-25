@@ -1068,6 +1068,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  baseRig: {fileID: 4736743072354544}
 --- !u!65 &6159340893357486153
 BoxCollider:
   m_ObjectHideFlags: 0
