@@ -1,3 +1,4 @@
+using Normal.Realtime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,22 +10,63 @@ public class ScoreTrigger : MonoBehaviour
     public Action<NetworkedBall> ReportTriggerEntered;
     public Action<NetworkedBall> ReportTriggerExit;
 
+    Realtime realtime;
+
+    int localID = -1;
+
+
+    private void Awake()
+    {
+        realtime = FindObjectOfType<Realtime>();
+        SetLocalID();   
+    }
+
+
+
+    void SetLocalID()
+    {
+        realtime = FindObjectOfType<Realtime>();
+        RealtimeAvatarManager avatarManager = realtime.GetComponent<RealtimeAvatarManager>();
+        if (avatarManager != null && avatarManager.localAvatar != null)
+        {
+            localID = avatarManager.localAvatar.realtimeView.ownerIDSelf;
+            Debug.Log("LOCAL ID RROM REALTIME: " + localID);
+        }
+    }
+
 
     void OnTriggerEnter(Collider other)
     {
+        if (localID == -1)
+        {
+            SetLocalID();
+        }
+
         other.TryGetComponent<NetworkedBall>(out NetworkedBall ball);
         if (ball != null)
         {
-            ReportTriggerEntered?.Invoke(ball);
+            if (ball.GetCurrentPlayerID() == localID)
+            {
+                ReportTriggerEntered?.Invoke(ball);
+            }
         }
     }
 
     void OnTriggerExit(Collider other)
     {
+        if (localID == -1)
+        {
+            SetLocalID();
+        }
+
         other.TryGetComponent<NetworkedBall>(out NetworkedBall ball);
         if (ball != null)
         {
-            ReportTriggerExit?.Invoke(ball);
+            // This only reports balls that scored
+            if (ball.GetCurrentPlayerID() == localID)
+            {
+                ReportTriggerExit?.Invoke(ball);
+            }         
         }
     }
 

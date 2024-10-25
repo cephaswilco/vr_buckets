@@ -34,7 +34,7 @@ public class RealtimeCamera : MonoBehaviour
             // This is to test input
             if (Input.GetKeyDown(KeyCode.K))
             {
-                scoreReporter.ReportScore(realtimeView.ownerIDSelf, 1);
+                //scoreReporter.ReportScore(realtimeView.ownerIDSelf, 1);
             }
         }
     }

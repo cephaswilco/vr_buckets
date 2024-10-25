@@ -68,8 +68,7 @@ public class ObjectGrabber : MonoBehaviour
                 Debug.Log("Velocity: "  + velocity);
                 Rigidbody grabbedObjectRigidBody = grabbedObject.GetComponent<Rigidbody>();
                 grabbedObjectRigidBody.isKinematic = false;
-                grabbedObjectRigidBody.AddForce(velocity * 2f, ForceMode.VelocityChange);
-                //grabbedObject.Release();
+                grabbedObjectRigidBody.AddForce(velocity * 3f, ForceMode.VelocityChange);
 
                 xrVelocity = new Vector3();
 
