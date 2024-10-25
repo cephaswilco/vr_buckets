@@ -16,6 +16,8 @@ public class ScoreReporter : MonoBehaviour
     {
         _playerScore = GetComponent<MultiplayerScore>();
         _playerScore.OnScoreChanged += ScoreChanged;
+
+        UpdateScoreBoard();
     }
 
 

@@ -1056,6 +1056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc34d03820fc65b49a7eacde78f78c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  realtimeView: {fileID: 114879240156072798}
   handGripAction:
     m_UseReference: 1
     m_Action:

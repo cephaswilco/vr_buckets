@@ -1,3 +1,4 @@
+using Normal.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,8 @@ using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 public class ObjectGrabber : MonoBehaviour
 {
-
+    [SerializeField]
+    RealtimeView realtimeView;
     public InputActionProperty handGripAction;
     float gripValue;
     float previousGripValue;
@@ -86,7 +88,8 @@ public class ObjectGrabber : MonoBehaviour
                 RightControllerDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
             }
             Grabbable grabbable = other.GetComponent<Grabbable>();
-            if (grabbable)
+            NetworkedBall networkedBall = other.GetComponent<NetworkedBall>();
+            if (grabbable && networkedBall)
             {
                 if (gripValue > 0)
                 {
@@ -94,6 +97,8 @@ public class ObjectGrabber : MonoBehaviour
                     grabbedObject = grabbable.Grab(this.transform);
                     Debug.Log("Kinematic true");
                     grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+
+                    networkedBall.SetCurrentPlayerID(realtimeView.ownerIDSelf);
                 }
             }
         }
