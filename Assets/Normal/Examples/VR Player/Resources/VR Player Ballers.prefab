@@ -718,6 +718,7 @@ GameObject:
   - component: {fileID: 3726106771923879130}
   - component: {fileID: 5216525491609636769}
   - component: {fileID: 8200361873612146173}
+  - component: {fileID: 1567580484552496826}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -917,6 +918,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realtimeView: {fileID: 114879240156072798}
+--- !u!81 &1567580484552496826
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946431626971230}
+  m_Enabled: 1
 --- !u!1001 &3515811488555113892
 PrefabInstance:
   m_ObjectHideFlags: 0
