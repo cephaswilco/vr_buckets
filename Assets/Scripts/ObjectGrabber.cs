@@ -12,7 +12,7 @@ public class ObjectGrabber : MonoBehaviour
     float gripValue;
     float previousGripValue;
     float consecutiveGrip;
-    float consevutiveGripThreshhold = 0.16f;
+    float consecutiveGripThreshhold = 0.16f;
 
 
     bool gripped;
@@ -45,7 +45,7 @@ public class ObjectGrabber : MonoBehaviour
    
             consecutiveGrip += previousGripValue - gripValue; 
 
-            if (consecutiveGrip > consevutiveGripThreshhold)
+            if (consecutiveGrip > consecutiveGripThreshhold)
             {
                 gripValue = 0f;
                 consecutiveGrip = 0f;
@@ -55,10 +55,8 @@ public class ObjectGrabber : MonoBehaviour
             {
                 gripped = false;
 
-                if (RightControllerDevice == null)
-                {
-                    RightControllerDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-                }
+
+                RightControllerDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
                 RightControllerDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.deviceVelocity, out xrVelocity);
                 Vector3 velocity = xrVelocity;
