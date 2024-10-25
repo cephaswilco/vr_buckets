@@ -24,6 +24,9 @@ public class NetScoreController : MonoBehaviour
 
     float scoreBlockerLimit = 3f;
 
+    [SerializeField]
+    int scoreWorth = 1;
+
     private void Update()
     {
         scoreBlockerTime += Time.deltaTime;
@@ -72,7 +75,7 @@ public class NetScoreController : MonoBehaviour
     public void Scored(NetworkedBall networkedBall)
     {
         // 
-        scoreReporter.ReportScore(networkedBall.GetCurrentPlayerID(), +1);
+        scoreReporter.ReportScore(networkedBall.GetCurrentPlayerID(), scoreWorth);
     }
 
 
