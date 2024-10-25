@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class NetScoreController : MonoBehaviour
@@ -13,6 +14,9 @@ public class NetScoreController : MonoBehaviour
 
     [SerializeField]
     ScoreReporter scoreReporter;
+
+    [SerializeField]
+    TextMeshProUGUI textMeshProUGUI;
 
     float resetTime = 0f;
     float resetAfter = 5f;
@@ -35,7 +39,7 @@ public class NetScoreController : MonoBehaviour
 
     private void Awake()
     {
-        
+        textMeshProUGUI.text = scoreWorth+"";
 
         topScoreTrigger.ReportTriggerEntered += ReportTopEnter;
         topScoreTrigger.ReportTriggerExit += ReportTopExit;
