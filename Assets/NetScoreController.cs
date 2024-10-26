@@ -18,27 +18,33 @@ public class NetScoreController : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI textMeshProUGUI;
 
-    float resetTime = 0f;
-    float resetAfter = 5f;
-
-    bool inTopTrigger = false;
-    bool inBottomTrigger = false;
+    float scoreAttemptTime = 0f;
+    float scoreAttemptLimit = 3f;
 
     float scoreBlockerTime = 0f;
-
-    float scoreBlockerLimit = 3f;
+    float scoreBlockerLimit = 5f;  // This should represent enough time to block goals that have been attempted via throwing the ball underneathe the hoop and back in.
 
     [SerializeField]
     int scoreWorth = 1;
 
+
     private void Update()
     {
         scoreBlockerTime += Time.deltaTime;
+        scoreAttemptTime += Time.deltaTime;
+
+
+        Debug.Log("------------");
+        Debug.Log("scoreBlockerTime: " + scoreBlockerTime);
+        Debug.Log("scoreAttemptTime: " + scoreAttemptTime);
     }
 
 
     private void Awake()
     {
+
+        scoreBlockerTime = scoreBlockerLimit;
+
         textMeshProUGUI.text = scoreWorth+"";
 
         topScoreTrigger.ReportTriggerEntered += ReportTopEnter;
@@ -49,32 +55,58 @@ public class NetScoreController : MonoBehaviour
         bottomScoreTrigger.ReportTriggerExit += ReportBottomExit;
     }
 
-    // This is just a basica implementation, for a more fair and rigorous implementation you would need to keep track of the direction of the ball as it passes through the triggers to ensure a regulation basket score
 
-    public void ReportBottomEnter(NetworkedBall networkedBall)
-    {
-
-    }
-
-    public void ReportBottomExit(NetworkedBall networkedBall)
-    {
-        if (scoreBlockerTime > scoreBlockerLimit)
-        {
-            scoreBlockerTime = 0f;
-            Scored(networkedBall);
-        }
-    }
 
     public void ReportTopEnter(NetworkedBall networkedBall)
     {
-
+        if (scoreBlockerTime > scoreBlockerLimit)
+        {
+            scoreAttemptTime = 0f;
+        }
     }
 
     public void ReportTopExit(NetworkedBall networkedBall)
     {
-
+        if (scoreBlockerTime > scoreBlockerLimit)
+        {
+            scoreAttemptTime = 0f;
+        }
     }
 
+
+    public void ReportBottomEnter(NetworkedBall networkedBall)
+    {
+        // If ball is coming through the hoop, extend the limit to allow a goal but a few seconds, otherwise if it enters bottom without coming through top (as counted by the scoreAttemptTime), reset the scoreBlockerTime so they can't reverse basket.
+        if (scoreAttemptTime < scoreAttemptLimit)
+        {
+            if (scoreBlockerTime > scoreBlockerLimit)
+            {
+                 scoreAttemptTime = -2f;
+            }     
+        } 
+        else
+        {
+            scoreBlockerTime = 0;
+        }
+    }
+
+    public void ReportBottomExit(NetworkedBall networkedBall)
+    {
+        // if scoreBlockerTime is greater than limit, it's not blocking
+        if (scoreBlockerTime > scoreBlockerLimit)
+        {
+            // if scoreAttemptTime is less than AttemptLimit, it counts as a goal if it exits bottom
+            if (scoreAttemptTime < scoreAttemptLimit)
+            {
+                scoreAttemptTime = scoreAttemptLimit;
+                scoreBlockerTime = scoreBlockerLimit;
+                Scored(networkedBall);
+            } else // If scoreAttemptTime is out of range, set blocking time.
+            {
+                scoreBlockerTime = 0f;
+            }
+        }      
+    }
 
     public void Scored(NetworkedBall networkedBall)
     {
