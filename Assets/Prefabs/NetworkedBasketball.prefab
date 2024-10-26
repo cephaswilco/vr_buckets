@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8763132877800756706}
   - component: {fileID: 6642474475659400953}
   - component: {fileID: 104190253346004722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NetworkedBasketball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
