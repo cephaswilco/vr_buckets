@@ -73,7 +73,7 @@ public class ObjectGrabber : MonoBehaviour
                 grabbedObjectRigidBody.AddForce(velocity * 3f, ForceMode.VelocityChange);
 
                 xrVelocity = new Vector3();
-
+                //grabbedObject.Release();
                 grabbedObject = null;
             }
         }
@@ -94,13 +94,15 @@ public class ObjectGrabber : MonoBehaviour
             {
                 if (gripValue > 0)
                 {
-                    hapticFeedback.TriggerRightHaptic(0.7f, 0.35f);
                     gripped = true;
                     grabbedObject = grabbable.Grab(this.transform);
-                    Debug.Log("Kinematic true");
-                    grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
-
-                    networkedBall.SetCurrentPlayerID(realtimeView.ownerIDSelf);
+                    if (grabbedObject != null)
+                    {
+                        hapticFeedback.TriggerRightHaptic(0.7f, 0.35f);
+                        grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+                        networkedBall.SetCurrentPlayerID(realtimeView.ownerIDSelf);
+                    }
+                 
                 }
             }
         }

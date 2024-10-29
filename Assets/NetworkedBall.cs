@@ -22,7 +22,6 @@ public class NetworkedBall : MonoBehaviour
 
     public int GetCurrentPlayerID()
     {
-        Debug.Log("THIS IS THE PLAYER ID JUST LOGGED FROM NETWORKED BALL: " + realtimeTransform.ownerIDSelf);
         return realtimeTransform.ownerIDSelf;
     }
 

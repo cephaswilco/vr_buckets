@@ -1140,7 +1140,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.07, y: 0.1, z: 0.08}
-  m_Center: {x: 0.03, y: 0, z: 0}
+  m_Center: {x: 0.03, y: -0.01, z: 0}
 --- !u!95 &2476465937042450409 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5686134208192617028, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}

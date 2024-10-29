@@ -21,17 +21,21 @@ public class Grabbable : MonoBehaviour, IGrabbable
 
     public Grabbable Grab(Transform grabberTransform)
     {
-        if (!realtimeTransform.isOwnedLocallySelf || realtimeTransform.isOwnedRemotelySelf)
+        if (!realtimeTransform.isOwnedRemotelySelf)
         {  
-            realtimeTransform.RequestOwnership();         
+            realtimeTransform.RequestOwnership();
+            return this;
         }
-        return this;
+
+        return null;
     }
 
     public void Release()
     {
-        // Optionally, you can relinquish ownership when done
-        realtimeTransform.ClearOwnership();
+        if (realtimeTransform.isOwnedLocallySelf)
+        {
+            realtimeTransform.ClearOwnership();
+        }
     }
 
 }

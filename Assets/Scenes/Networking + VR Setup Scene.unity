@@ -1482,6 +1482,10 @@ PrefabInstance:
       propertyPath: _viewUUID
       value: 081364a6-a9b8-406a-8dda-7e8ea6edae8e
       objectReference: {fileID: 0}
+    - target: {fileID: 7530067676141168176, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
+      propertyPath: _sceneViewPreventOwnershipTakeover
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
