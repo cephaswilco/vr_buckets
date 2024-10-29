@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8763132877800756706}
   - component: {fileID: 6642474475659400953}
   - component: {fileID: 104190253346004722}
+  - component: {fileID: 8319422587796062881}
   m_Layer: 6
   m_Name: NetworkedBasketball
   m_TagString: Untagged
@@ -111,6 +112,8 @@ MonoBehaviour:
   _components:
   - componentID: 1
     component: {fileID: 584657443210766264}
+  - componentID: 2
+    component: {fileID: 8319422587796062881}
   _childViews: []
 --- !u!114 &584657443210766264
 MonoBehaviour:
@@ -314,3 +317,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxVolume: 1
   speedThreshold: 10
+--- !u!114 &8319422587796062881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358607121988860691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18bd5eef7561694a87b2c07ef422aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

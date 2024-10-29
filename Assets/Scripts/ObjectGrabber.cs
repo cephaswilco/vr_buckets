@@ -39,6 +39,11 @@ public class ObjectGrabber : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!realtimeView.isOwnedLocallySelf)
+        {
+            return;
+        }
+
         gripValue = handGripAction.action.ReadValue<float>();
 
         if (grabbedObject != null)
@@ -73,7 +78,7 @@ public class ObjectGrabber : MonoBehaviour
                 grabbedObjectRigidBody.AddForce(velocity * 3f, ForceMode.VelocityChange);
 
                 xrVelocity = new Vector3();
-                //grabbedObject.Release();
+                grabbedObject.Release();
                 grabbedObject = null;
             }
         }
@@ -82,6 +87,12 @@ public class ObjectGrabber : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (!realtimeView.isOwnedLocallySelf)
+        {
+            return;
+        }
+
+
         if (!gripped)
         {
             if (RightControllerDevice == null)
@@ -95,7 +106,7 @@ public class ObjectGrabber : MonoBehaviour
                 if (gripValue > 0)
                 {
                     gripped = true;
-                    grabbedObject = grabbable.Grab(this.transform);
+                    grabbedObject = grabbable.Grab(this.transform, realtimeView);
                     if (grabbedObject != null)
                     {
                         hapticFeedback.TriggerRightHaptic(0.7f, 0.35f);
