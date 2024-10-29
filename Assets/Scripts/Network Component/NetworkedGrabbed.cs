@@ -3,6 +3,7 @@ using Normal.Realtime;
 
 public class NetworkedGrabbed : RealtimeComponent<GrabbedModel>
 {
+    [SerializeField]
     public int playerID
     {
         get => model._playerID;
@@ -39,7 +40,7 @@ public class NetworkedGrabbed : RealtimeComponent<GrabbedModel>
 
     public void SetPlayerID(int newPlayerID)
     {
-        if (realtime != null && realtimeView.isOwnedLocallySelf)
+        if (realtime != null)
         {
             model._playerID = newPlayerID;
         }

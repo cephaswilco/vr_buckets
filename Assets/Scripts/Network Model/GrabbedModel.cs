@@ -7,5 +7,5 @@ using System.Diagnostics;
 public partial class GrabbedModel 
 {
     [RealtimeProperty(1, true, true)]
-    public int _playerID; // Unique identifier for the player
+    public int _playerID = -1; // Unique identifier for the player
 }

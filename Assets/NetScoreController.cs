@@ -34,9 +34,9 @@ public class NetScoreController : MonoBehaviour
         scoreAttemptTime += Time.deltaTime;
 
 
-        Debug.Log("------------");
+       /* Debug.Log("------------");
         Debug.Log("scoreBlockerTime: " + scoreBlockerTime);
-        Debug.Log("scoreAttemptTime: " + scoreAttemptTime);
+        Debug.Log("scoreAttemptTime: " + scoreAttemptTime);*/
     }
 
 

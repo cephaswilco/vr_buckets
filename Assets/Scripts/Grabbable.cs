@@ -27,7 +27,7 @@ public class Grabbable : MonoBehaviour, IGrabbable
         // -1 means no one has grabbed, self means local currently owns it
         if (networkGrabbed.playerID == -1 || networkGrabbed.playerID == realtimeView.ownerIDSelf)
         {
-            networkGrabbed.SetPlayerID(realtimeTransform.realtimeView.ownerIDSelf);
+            networkGrabbed.SetPlayerID(realtimeView.ownerIDSelf);
             realtimeTransform.RequestOwnership();
             return this;
         }
