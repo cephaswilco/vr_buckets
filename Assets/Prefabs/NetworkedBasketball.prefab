@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 6642474475659400953}
   - component: {fileID: 104190253346004722}
   - component: {fileID: 8319422587796062881}
+  - component: {fileID: 2116166394679794492}
   m_Layer: 6
   m_Name: NetworkedBasketball
   m_TagString: Untagged
@@ -66,7 +67,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 2
   m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!135 &8337883086617551186
@@ -330,3 +331,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPlayerID: 0
+--- !u!114 &2116166394679794492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358607121988860691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8810c6d8635cfcd4fad96f7361bb9c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
