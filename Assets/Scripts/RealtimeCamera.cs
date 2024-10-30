@@ -11,6 +11,14 @@ public class RealtimeCamera : MonoBehaviour
     CameraSetter cameraSetter;
     ScoreReporter scoreReporter;
 
+    AudioListener audioListener;
+
+
+    private void Awake()
+    {
+        audioListener = GetComponent<AudioListener>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +29,8 @@ public class RealtimeCamera : MonoBehaviour
         {
             cameraSetter.SetCanvasCamera(transform.GetComponent<Camera>());
             transform.GetComponent<Camera>().enabled = true;
-
+            audioListener.enabled = true;
         }
-     
     }
 
     // Update is called once per frame

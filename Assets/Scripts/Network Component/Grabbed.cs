@@ -1,14 +1,10 @@
 using UnityEngine;
 using Normal.Realtime;
 
-public class NetworkedGrabbed : RealtimeComponent<GrabbedModel>
+public class Grabbed : RealtimeComponent<GrabbedModel>
 {
-    [SerializeField]
-    public int playerID
-    {
-        get => model._playerID;
-        set => model._playerID = value;
-    }
+
+    public int currentPlayerID;
 
     protected override void OnRealtimeModelReplaced(GrabbedModel previousModel, GrabbedModel currentModel)
     {
@@ -21,7 +17,7 @@ public class NetworkedGrabbed : RealtimeComponent<GrabbedModel>
         if (currentModel != null)
         {
             // Update the UI or state with the current model's data
-            UpdatePlayerIDDisplay(currentModel._playerID);
+            UpdatePlayerIDDisplay(currentModel.playerID);
 
             // Subscribe to events on the new model
             currentModel.playerIDDidChange += PlayerIDDidChange;
@@ -30,19 +26,23 @@ public class NetworkedGrabbed : RealtimeComponent<GrabbedModel>
 
     private void PlayerIDDidChange(GrabbedModel model, int playerID)
     {
+        Debug.Log("PLAYER DID CHANGE: " + playerID);
         UpdatePlayerIDDisplay(playerID);
     }
 
     private void UpdatePlayerIDDisplay(int playerID)
     {
+        currentPlayerID = playerID;
+    }
 
+    public int GetPlayerID()
+    {
+        return model.playerID;
     }
 
     public void SetPlayerID(int newPlayerID)
     {
-        if (realtime != null)
-        {
-            model._playerID = newPlayerID;
-        }
+         Debug.Log("Set Player " + newPlayerID);
+         model.playerID = newPlayerID;  
     }
 }

@@ -7,13 +7,15 @@ using UnityEngine.InputSystem;
 public class Grabbable : MonoBehaviour, IGrabbable
 {
 
+    RealtimeView realtimeView;
     RealtimeTransform realtimeTransform;
-    NetworkedGrabbed networkGrabbed;
+    Grabbed networkGrabbed;
 
     void Awake()
     {
+        realtimeView = GetComponent<RealtimeView>();
         realtimeTransform = GetComponent<RealtimeTransform>();
-        networkGrabbed = GetComponent<NetworkedGrabbed>();
+        networkGrabbed = GetComponent<Grabbed>();
     }
 
     void Update()
@@ -21,14 +23,20 @@ public class Grabbable : MonoBehaviour, IGrabbable
 
     }
 
-    public Grabbable Grab(Transform grabberTransform, RealtimeView realtimeView)
+    public Grabbable Grab(Transform grabberTransform, RealtimeView grabbingRealtimeView)
     {
+
+        Debug.Log("Grabbed ball belongs to " + networkGrabbed.GetPlayerID() + " and player " + grabbingRealtimeView.ownerIDSelf + " is trying to grab it");
+
         // If the item isn't grabbed, can grab. 
         // -1 means no one has grabbed, self means local currently owns it
-        if (networkGrabbed.playerID == -1 || networkGrabbed.playerID == realtimeView.ownerIDSelf)
+        if (networkGrabbed.GetPlayerID() == -1 || networkGrabbed.GetPlayerID() == grabbingRealtimeView.ownerIDSelf)
         {
-            networkGrabbed.SetPlayerID(realtimeView.ownerIDSelf);
+            Debug.Log("Grabbed ball belongs to " + networkGrabbed.GetPlayerID() + " and player " + grabbingRealtimeView.ownerIDSelf + " is trying to grab it --- Success!");
+
+            networkGrabbed.SetPlayerID(grabbingRealtimeView.ownerIDSelf);
             realtimeTransform.RequestOwnership();
+            this.realtimeView.RequestOwnership();
             return this;
         }
 
@@ -37,6 +45,7 @@ public class Grabbable : MonoBehaviour, IGrabbable
 
     public void Release()
     {
+        Debug.Log("Released: ");
         if (realtimeTransform.isOwnedLocallySelf)
         {
             // No one has the ball grabbed
