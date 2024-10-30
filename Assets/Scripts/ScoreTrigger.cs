@@ -7,8 +7,8 @@ using UnityEngine;
 public class ScoreTrigger : MonoBehaviour
 {
 
-    public Action<NetworkedBall> ReportTriggerEntered;
-    public Action<NetworkedBall> ReportTriggerExit;
+    public Action<BallScoreId> ReportTriggerEntered;
+    public Action<BallScoreId> ReportTriggerExit;
 
     Realtime realtime;
 
@@ -42,7 +42,7 @@ public class ScoreTrigger : MonoBehaviour
             SetLocalID();
         }
 
-        other.TryGetComponent<NetworkedBall>(out NetworkedBall ball);
+        other.TryGetComponent<BallScoreId>(out BallScoreId ball);
         if (ball != null)
         {
             if (ball.GetCurrentPlayerID() == localID)
@@ -59,7 +59,7 @@ public class ScoreTrigger : MonoBehaviour
             SetLocalID();
         }
 
-        other.TryGetComponent<NetworkedBall>(out NetworkedBall ball);
+        other.TryGetComponent<BallScoreId>(out BallScoreId ball);
         if (ball != null)
         {
             // This only reports balls that scored

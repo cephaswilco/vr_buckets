@@ -100,7 +100,7 @@ public class ObjectGrabber : MonoBehaviour
                 RightControllerDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
             }
             Grabbable grabbable = other.GetComponent<Grabbable>();
-            NetworkedBall networkedBall = other.GetComponent<NetworkedBall>();
+            BallScoreId networkedBall = other.GetComponent<BallScoreId>();
             if (grabbable && networkedBall)
             {
                 if (gripValue > 0)

@@ -57,7 +57,7 @@ public class NetScoreController : MonoBehaviour
 
 
 
-    public void ReportTopEnter(NetworkedBall networkedBall)
+    public void ReportTopEnter(BallScoreId networkedBall)
     {
         if (scoreBlockerTime > scoreBlockerLimit)
         {
@@ -65,7 +65,7 @@ public class NetScoreController : MonoBehaviour
         }
     }
 
-    public void ReportTopExit(NetworkedBall networkedBall)
+    public void ReportTopExit(BallScoreId networkedBall)
     {
         if (scoreBlockerTime > scoreBlockerLimit)
         {
@@ -74,7 +74,7 @@ public class NetScoreController : MonoBehaviour
     }
 
 
-    public void ReportBottomEnter(NetworkedBall networkedBall)
+    public void ReportBottomEnter(BallScoreId networkedBall)
     {
         // If ball is coming through the hoop, extend the limit to allow a goal but a few seconds, otherwise if it enters bottom without coming through top (as counted by the scoreAttemptTime), reset the scoreBlockerTime so they can't reverse basket.
         if (scoreAttemptTime < scoreAttemptLimit)
@@ -90,7 +90,7 @@ public class NetScoreController : MonoBehaviour
         }
     }
 
-    public void ReportBottomExit(NetworkedBall networkedBall)
+    public void ReportBottomExit(BallScoreId networkedBall)
     {
         // if scoreBlockerTime is greater than limit, it's not blocking
         if (scoreBlockerTime > scoreBlockerLimit)
@@ -108,7 +108,7 @@ public class NetScoreController : MonoBehaviour
         }      
     }
 
-    public void Scored(NetworkedBall networkedBall)
+    public void Scored(BallScoreId networkedBall)
     {
         // 
         scoreReporter.ReportScore(networkedBall.GetCurrentPlayerID(), scoreWorth);

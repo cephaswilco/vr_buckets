@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NetworkedBall : MonoBehaviour
+public class BallScoreId : MonoBehaviour
 {
 
     RealtimeTransform realtimeTransform;
