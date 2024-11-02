@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class PhysicsXRRigHelper : MonoBehaviour
 {
@@ -33,5 +34,6 @@ public class PhysicsXRRigHelper : MonoBehaviour
     public void Enable(bool set)
     {
         physicsHandRight.SetUpdateEnabled(set);
+        physicsHandLeft.SetUpdateEnabled(set);
     }
 }

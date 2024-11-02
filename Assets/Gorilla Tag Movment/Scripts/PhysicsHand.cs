@@ -25,16 +25,16 @@ public class PhysicsHand : MonoBehaviour
 
     void Start()
     {
-        transform.position = target.position;
-        transform.rotation = target.rotation;
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.maxAngularVelocity = float.PositiveInfinity;
-        _previousPosition = transform.position;
     }
 
     public void SetTarget(Transform target)
     {
         this.target = target;
+        transform.position = target.position;
+        transform.rotation = target.rotation;
+        _previousPosition = transform.position;
     }
 
     public void SetPlayerRigidbody(Rigidbody playerRigidbody)
@@ -54,7 +54,7 @@ public class PhysicsHand : MonoBehaviour
             PIDMovement();
             PIDRotation();
             if (_isColliding) HookesLaw();
-        }  
+        }     
     }
 
     void PIDMovement()
@@ -113,12 +113,16 @@ public class PhysicsHand : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (isUpdateEnabled)
+        {
             _isColliding = true;
+        }
     }
 
     void OnCollisionExit(Collision other)
     {
         if (isUpdateEnabled)
+        {
             _isColliding = false;
+        }
     }
 }

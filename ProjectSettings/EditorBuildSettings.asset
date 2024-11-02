@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SceneSelector.unity
-    guid: fa82462e60a5cfb4397ffd937b1c3437
-  - enabled: 1
-    path: Assets/Scenes/Networking + VR Setup Scene.unity
-    guid: 2b72496a3639e704f9c5844e03d3b2db
-  - enabled: 1
     path: Assets/Scenes/GorillaScene.unity
     guid: acfa0bab0e9b43949bccf9ff07158978
   m_configObjects:
