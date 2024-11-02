@@ -2056,8 +2056,8 @@ MonoBehaviour:
   _syncPosition: 1
   _syncRotation: 1
   _syncScale: 0
-  _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
+  _syncVelocity: 0
+  _maintainOwnershipWhileSleeping: 1
 --- !u!54 &2302098215134206287
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2710,7 +2710,7 @@ MonoBehaviour:
   _syncPosition: 1
   _syncRotation: 1
   _syncScale: 1
-  _syncVelocity: 1
+  _syncVelocity: 0
   _maintainOwnershipWhileSleeping: 1
 --- !u!114 &9218674105816661190
 MonoBehaviour:
