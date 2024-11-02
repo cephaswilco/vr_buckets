@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5286263215013458755}
+  - component: {fileID: 3661523270872556473}
   m_Layer: 0
   m_Name: Physics XR Rig
   m_TagString: Untagged
@@ -33,6 +34,20 @@ Transform:
   - {fileID: 4939404115244291350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3661523270872556473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3170974502629711846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b290203892b1a344a5d83ad364bdb19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  physicsHandLeft: {fileID: 2983207350154451602}
+  physicsHandRight: {fileID: 8077406180608989378}
 --- !u!1 &4661905401110606364
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,7 +19,10 @@ public class PhysicsHand : MonoBehaviour
     Vector3 _previousPosition;
     Rigidbody _rigidbody;
     bool _isColliding;
-    
+
+    bool isUpdateEnabled;
+
+
     void Start()
     {
         transform.position = target.position;
@@ -29,11 +32,29 @@ public class PhysicsHand : MonoBehaviour
         _previousPosition = transform.position;
     }
 
+    public void SetTarget(Transform target)
+    {
+        this.target = target;
+    }
+
+    public void SetPlayerRigidbody(Rigidbody playerRigidbody)
+    {
+        this.playerRigidbody = playerRigidbody;
+    }
+
+    public void SetUpdateEnabled(bool isUpdateEnabled)
+    {
+        this.isUpdateEnabled = isUpdateEnabled;
+    }
+
     void FixedUpdate()
     {
-        PIDMovement();
-        PIDRotation();
-        if (_isColliding) HookesLaw();
+        if (isUpdateEnabled)
+        {
+            PIDMovement();
+            PIDRotation();
+            if (_isColliding) HookesLaw();
+        }  
     }
 
     void PIDMovement()
@@ -91,11 +112,13 @@ public class PhysicsHand : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        _isColliding = true;
+        if (isUpdateEnabled)
+            _isColliding = true;
     }
 
     void OnCollisionExit(Collision other)
     {
-        _isColliding = false;
+        if (isUpdateEnabled)
+            _isColliding = false;
     }
 }
