@@ -236,8 +236,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
-      propertyPath: _syncVelocity
+      propertyPath: _syncScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
+      propertyPath: _syncVelocity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2091999069376213480, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1003,8 +1007,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
-      propertyPath: _syncVelocity
+      propertyPath: _syncScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
+      propertyPath: _syncVelocity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2091999069376213480, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1282,8 +1290,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
-      propertyPath: _syncVelocity
+      propertyPath: _syncScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
+      propertyPath: _syncVelocity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2091999069376213480, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1569,8 +1581,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
-      propertyPath: _syncVelocity
+      propertyPath: _syncScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
+      propertyPath: _syncVelocity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2091999069376213480, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3624,8 +3640,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
-      propertyPath: _syncVelocity
+      propertyPath: _syncScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
+      propertyPath: _syncVelocity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2091999069376213480, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4403,8 +4423,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
-      propertyPath: _syncVelocity
+      propertyPath: _syncScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
+      propertyPath: _syncVelocity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2091999069376213480, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4577,8 +4601,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
-      propertyPath: _syncVelocity
+      propertyPath: _syncScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 584657443210766264, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
+      propertyPath: _syncVelocity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2091999069376213480, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_LocalPosition.x
