@@ -1805,7 +1805,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 907478044}
   m_OnClick:
     m_PersistentCalls:
@@ -2237,7 +2237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gorillia Ball Game
+  m_text: Gorilla Ball Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -4096,7 +4096,7 @@ Transform:
   m_GameObject: {fileID: 1861843998}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7506337, y: 0.20537837, z: -0.08068013}
+  m_LocalPosition: {x: -2.7506337, y: 0.20537837, z: 2.498}
   m_LocalScale: {x: 0.58, y: 0.58, z: 0.58}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4820,19 +4820,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.284
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4844,11 +4844,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.30070582
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.953717
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4860,7 +4860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 145
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -4874,6 +4874,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 919132149155446097, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_Name
       value: Primitive_Pyramid
@@ -4893,15 +4897,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.284
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4917,11 +4921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.30070582
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.953717
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4933,7 +4937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 145
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63e02ddb08ce42da868504e1333d48ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -4981,14 +4985,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430285556218932985}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.15332592, y: -0.4451344, z: 0.077835664, w: -0.8787992}
+  m_LocalRotation: {x: -0, y: 0.45642066, z: -0, w: 0.88976413}
   m_LocalPosition: {x: -120.5, y: 62.5, z: -62.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 430285556393177362}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 19.803, y: 53.724, z: -0.018}
+  m_LocalEulerAnglesHint: {x: 0, y: 54.313, z: 0}
 --- !u!1 &430285556393177361
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,29 +5041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18dcb4be0dacd14f9bb6fd32d26e078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headCollider: {fileID: 430285557987295191}
-  bodyCollider: {fileID: 430285556887890744}
-  leftHandFollower: {fileID: 1253963248}
-  rightHandFollower: {fileID: 815043200}
-  rightHandTransform: {fileID: 430285558188870787}
-  leftHandTransform: {fileID: 430285556626214769}
-  velocityHistorySize: 8
-  maxArmLength: 1.5
-  unStickDistance: 1
-  velocityLimit: 0.4
-  maxJumpSpeed: 6.5
-  jumpMultiplier: 1.1
-  minimumRaycastDistance: 0.05
-  defaultSlideFactor: 0.03
-  defaultPrecision: 0.995
-  rightHandOffset: {x: 0, y: 0, z: 0}
-  leftHandOffset: {x: 0, y: 0, z: 0}
-  locomotionEnabledLayers:
-    serializedVersion: 2
-    m_Bits: 1
-  wasLeftHandTouching: 0
-  wasRightHandTouching: 0
-  disableMovement: 1
 --- !u!54 &430285556393177364
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5104,7 +5085,7 @@ MonoBehaviour:
   m_EnableInputActions: 1
   m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 1253963248}
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 2047574123}
   m_AnimateModel: 0
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
@@ -5302,8 +5283,8 @@ MonoBehaviour:
   m_LineBendRatio: 0.5
   m_BendingEnabledInteractionLayers:
     m_Bits: 4294967295
-  m_OverrideInteractorLineOrigin: 1
-  m_LineOriginTransform: {fileID: 0}
+  m_OverrideInteractorLineOrigin: 0
+  m_LineOriginTransform: {fileID: 430285556626214769}
   m_LineOriginOffset: 0
 --- !u!120 &430285556626214771
 LineRenderer:
@@ -5679,7 +5660,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 74
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -5879,7 +5860,7 @@ MonoBehaviour:
   m_EnableInputActions: 1
   m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 815043200}
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 178559634}
   m_AnimateModel: 0
   m_ModelSelectTransition: 
   m_ModelDeSelectTransition: 
@@ -6041,8 +6022,8 @@ MonoBehaviour:
   m_LineBendRatio: 0.5
   m_BendingEnabledInteractionLayers:
     m_Bits: 4294967295
-  m_OverrideInteractorLineOrigin: 1
-  m_LineOriginTransform: {fileID: 0}
+  m_OverrideInteractorLineOrigin: 0
+  m_LineOriginTransform: {fileID: 430285558188870787}
   m_LineOriginOffset: 0
 --- !u!120 &430285558188870817
 LineRenderer:

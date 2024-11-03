@@ -92,7 +92,6 @@ public class ObjectGrabber : MonoBehaviour
             return;
         }
 
-        Debug.Log("EnteredGrabberTrigger");
         if (!gripped)
         {
             if (RightControllerDevice == null)
