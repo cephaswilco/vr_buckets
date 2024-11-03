@@ -297,10 +297,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5092799652849381160, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7358607121988860691, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_Name
       value: NetworkedBasketball (7)
@@ -3795,10 +3791,6 @@ PrefabInstance:
     - target: {fileID: 2091999069376213480, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092799652849381160, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5653838278284736996, guid: 85a60653dd8ee0640982006d7ff25a02, type: 3}
       propertyPath: m_Enabled
