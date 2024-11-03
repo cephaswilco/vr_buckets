@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realtimeView: {fileID: 6866970831410776372}
+  realtimeTransform: {fileID: 5264599043106596609}
   handPinchAnimationAction:
     m_UseReference: 1
     m_Action:
@@ -156,6 +157,7 @@ GameObject:
   - component: {fileID: 8680181800762471303}
   - component: {fileID: 2372733640051053695}
   - component: {fileID: 7564296903481875623}
+  - component: {fileID: 8199942918920773104}
   m_Layer: 0
   m_Name: HeadModel
   m_TagString: Untagged
@@ -229,6 +231,14 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!81 &8199942918920773104
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428450383846999194}
+  m_Enabled: 0
 --- !u!1 &563599113339605167
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +287,6 @@ GameObject:
   - component: {fileID: 5604963538475858913}
   - component: {fileID: 5879229097625610619}
   - component: {fileID: 8573709686553858821}
-  - component: {fileID: 4223501785431278822}
   - component: {fileID: 9132254225702435200}
   m_Layer: 0
   m_Name: Head
@@ -478,14 +487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realtimeView: {fileID: 6866970831410776372}
---- !u!81 &4223501785431278822
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565151057045557984}
-  m_Enabled: 0
+  audioListener: {fileID: 8199942918920773104}
 --- !u!114 &9132254225702435200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,6 +1555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realtimeView: {fileID: 6866970831410776372}
+  realtimeTransform: {fileID: 4586910406602707220}
   handGripAction:
     m_UseReference: 1
     m_Action:
@@ -2070,6 +2073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realtimeView: {fileID: 6866970831410776372}
+  realtimeTransform: {fileID: 4586910406602707220}
   handPinchAnimationAction:
     m_UseReference: 1
     m_Action:
@@ -2584,7 +2588,6 @@ GameObject:
   - component: {fileID: 6866970831410776372}
   - component: {fileID: 7615759175085025020}
   - component: {fileID: 1810978114626811385}
-  - component: {fileID: 9218674105816661190}
   - component: {fileID: 2838657599585165476}
   - component: {fileID: 228683461008409546}
   - component: {fileID: 7714026499469680254}
@@ -2684,20 +2687,6 @@ MonoBehaviour:
   _syncScale: 1
   _syncVelocity: 0
   _maintainOwnershipWhileSleeping: 1
---- !u!114 &9218674105816661190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8168688792411360383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017c5e3933235514c9520e1dace2a4b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ActionAssets:
-  - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &2838657599585165476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2785,7 +2774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 2838657599585165476}
-  m_TurnSpeed: 60
+  m_TurnSpeed: 90
   m_LeftHandTurnAction:
     m_UseReference: 0
     m_Action:

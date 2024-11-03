@@ -86,6 +86,11 @@ public class MultiplayerScore : RealtimeComponent<MultiplayerScoreModel>
     {
         List<int> playerIDs = new List<int>();
 
+        if (_playerScores == null)
+        {
+            return new List<int>();
+        }
+
         foreach (var item in _playerScores)
         {
             playerIDs.Add((int)item.Key);

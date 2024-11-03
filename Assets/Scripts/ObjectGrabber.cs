@@ -10,6 +10,11 @@ public class ObjectGrabber : MonoBehaviour
 {
     [SerializeField]
     RealtimeView realtimeView;
+
+    [SerializeField]
+    RealtimeTransform realtimeTransform;
+
+
     public InputActionProperty handGripAction;
     float gripValue;
     float previousGripValue;
@@ -39,7 +44,11 @@ public class ObjectGrabber : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!realtimeView.isOwnedLocallySelf)
+
+        gripValue = handGripAction.action.ReadValue<float>();
+        Debug.Log("gripValue " + gripValue);
+        Debug.Log("realtimeTransform " + realtimeTransform.ownerIDSelf);
+        if (!realtimeTransform.isOwnedLocallySelf)
         {
             return;
         }
@@ -87,7 +96,7 @@ public class ObjectGrabber : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (!realtimeView.isOwnedLocallySelf)
+        if (!realtimeTransform.isOwnedLocallySelf)
         {
             return;
         }
