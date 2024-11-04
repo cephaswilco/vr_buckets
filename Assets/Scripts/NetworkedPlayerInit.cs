@@ -23,7 +23,6 @@ public class NetworkedPlayerInit : MonoBehaviour
 
     Vector3 startPosition;
 
-    [SerializeField]
     ScoreReporter scoreReporter;
 
     int delayTickTime = 100;
@@ -33,6 +32,7 @@ public class NetworkedPlayerInit : MonoBehaviour
     void Awake()
     {
         realtimeView = GetComponent<RealtimeView>();
+        scoreReporter = FindAnyObjectByType<ScoreReporter>();
         physicsXRRig = FindAnyObjectByType<PhysicsXRRigHelper>();
         realtimeView.didReplaceAllComponentModels += OnModelChanged;    
     } 

@@ -24,6 +24,7 @@ public class LevelGameController : MonoBehaviour
     {
         multiplayerScore.ResetScore();
     }
+
     public void InitializeGorillaballGame()
     {
         multiplayerScore.ResetScore();

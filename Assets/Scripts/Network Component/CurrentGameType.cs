@@ -55,9 +55,6 @@ public class CurrentGameType : RealtimeComponent<CurrentGameTypeModel>
 
         if (gameTypeID == 0) 
         {
-            levelGameController.InitializeBasketballGame();
-        } else if (gameTypeID == 1)
-        {
             levelGameController.InitializeGorillaballGame();
         }
     }

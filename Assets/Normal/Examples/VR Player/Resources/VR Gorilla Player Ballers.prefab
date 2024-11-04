@@ -2909,7 +2909,6 @@ MonoBehaviour:
   LeftController: {fileID: 6138692312442181528}
   RightController: {fileID: 4926793020460758688}
   PlayerRigidbody: {fileID: 8566643650705998185}
-  scoreReporter: {fileID: 0}
 --- !u!1 &8206779464841278906
 GameObject:
   m_ObjectHideFlags: 0
