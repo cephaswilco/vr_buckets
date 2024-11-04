@@ -23,6 +23,9 @@ public class NetworkedPlayerInit : MonoBehaviour
 
     Vector3 startPosition;
 
+    [SerializeField]
+    ScoreReporter scoreReporter;
+
     int delayTickTime = 100;
     int delayTime = 0;
     bool delayFlag;
@@ -48,6 +51,7 @@ public class NetworkedPlayerInit : MonoBehaviour
         startPosition = new Vector3(0, 2, realtimeView.ownerIDSelf * 2);
         transform.position = startPosition; 
         physicsXRRig.enabled = true;
+        scoreReporter.ScoreChanged();
     }
 
     private void FixedUpdate()

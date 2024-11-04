@@ -23,15 +23,10 @@ public class LevelGameController : MonoBehaviour
     public void InitializeBasketballGame()
     {
         multiplayerScore.ResetScore();
-       /* basketballGameController.gameObject.SetActive(true);
-        gorillaBallGameController.gameObject.SetActive(false);*/
     }
     public void InitializeGorillaballGame()
     {
         multiplayerScore.ResetScore();
-       /* basketballGameController.gameObject.SetActive(false);
-        gorillaBallGameController.gameObject.SetActive(true);*/
-
     }
 
 }

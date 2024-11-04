@@ -80,6 +80,7 @@ public class MultiplayerScore : RealtimeComponent<MultiplayerScoreModel>
         {
             // Player exists, update the score
             playerScoreEntry.score = score;
+            _playerScores.Add(playerID, playerScoreEntry);
         }
 
         model.modelChangedIndicator++;
@@ -87,7 +88,15 @@ public class MultiplayerScore : RealtimeComponent<MultiplayerScoreModel>
 
     public int GetPlayerScore(int playerID)
     {
-        return _playerScores.TryGetValue((uint)playerID, out var playerScoreEntry) ? playerScoreEntry.score : 0;
+        _playerScores.TryGetValue((uint)playerID, out var playerScoreEntry);
+
+        if (playerScoreEntry.playerID == playerID)
+        {
+            return playerScoreEntry.score;
+        } else
+        {
+            return 0;
+        }
     }
 
     public List<int> GetAllPlayerIDs()

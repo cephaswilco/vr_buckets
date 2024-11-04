@@ -34,7 +34,6 @@ public class GorillaBallGameController : GameController
 
     }
 
-    /// This is being called by every client, which is an issue. Need a better way to delay this
     public void SetInitialPortals()
     {
         List<int> threeUniqueIntegers = GetRandomUniqueIntegers(uniqueList, 3);

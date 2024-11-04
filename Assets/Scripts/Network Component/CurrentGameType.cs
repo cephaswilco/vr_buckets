@@ -9,6 +9,16 @@ public class CurrentGameType : RealtimeComponent<CurrentGameTypeModel>
     [SerializeField]
     LevelGameController levelGameController;
 
+    [SerializeField]
+    ScoreReporter reporter;
+
+    float timeSinceAwake = 0;
+
+    private void Awake() {
+
+        timeSinceAwake += Time.deltaTime;
+    }
+
     protected override void OnRealtimeModelReplaced(CurrentGameTypeModel previousModel, CurrentGameTypeModel currentModel)
     {
         if (previousModel != null)
@@ -35,6 +45,12 @@ public class CurrentGameType : RealtimeComponent<CurrentGameTypeModel>
 
     private void UpdateGameTypeIDDisplay(int gameTypeID)
     {
+
+        if (timeSinceAwake < 4)
+        {
+            return;
+        }
+
         this.gameTypeID = gameTypeID;
 
         if (gameTypeID == 0) 
