@@ -66,7 +66,9 @@ public class MultiplayerScore : RealtimeComponent<MultiplayerScoreModel>
     {
         PlayerScoreModel playerScoreEntry;
 
-        if (!_playerScores.TryGetValue(playerID, out playerScoreEntry))
+        bool hasPlayerScore = _playerScores.TryGetValue(playerID, out playerScoreEntry);
+
+        if (!hasPlayerScore)
         {
             // Player doesn't exist, add a new entry
             playerScoreEntry = new PlayerScoreModel

@@ -11,22 +11,24 @@ public class GorillaGameTrigger : MonoBehaviour
     [SerializeField]
     GorillaBallGameController gorillaBallGameController;
 
-    float time = 0f;
-
     [SerializeField]
     GorillaHoopHandler gorillaHoopHandler;
 
-    private void Update()
-    {
-        time += Time.deltaTime;
-    }
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if (time < 5f)
-            return;
+        if (other.gameObject.layer == LayerMask.NameToLayer("Grabbable"))
+        {
+            Debug.Log("Basket Entered");
+        }
 
         RealtimeTransform ballRealtimeTransform = other.GetComponent<RealtimeTransform>();
+
+        if (ballRealtimeTransform == null)
+        {
+            return;
+        }
 
         if (!ballRealtimeTransform.isOwnedLocallySelf)
             return;
