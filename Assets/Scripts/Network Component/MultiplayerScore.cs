@@ -54,6 +54,14 @@ public class MultiplayerScore : RealtimeComponent<MultiplayerScoreModel>
         Debug.Log($"Player {model.playerID} removed. Remote: {remote}");
     }
 
+    public void ResetScore()
+    {
+        foreach (int id in GetAllPlayerIDs())
+        {
+            AddOrUpdatePlayerScore((uint)id, 0);
+        }
+    }
+
     public void AddOrUpdatePlayerScore(uint playerID, int score)
     {
         PlayerScoreModel playerScoreEntry;

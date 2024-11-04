@@ -1570,6 +1570,39 @@ MonoBehaviour:
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   baseRig: {fileID: 2606893692129199618}
   hapticFeedback: {fileID: 5440529709070051089}
+  playerPhysicsCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.011165123
+      outSlope: -0.011165123
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.12761389
+    - serializedVersion: 3
+      time: 5.0487785
+      value: 0.89186394
+      inSlope: -0.039456133
+      outSlope: -0.039456133
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.123894796
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10
+      value: 0.64999413
+      inSlope: -0.048850533
+      outSlope: -0.048850533
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!65 &6686690317547532421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2858,7 +2891,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.08
-  m_Height: 0.3
+  m_Height: 0.6
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1588137695452655001

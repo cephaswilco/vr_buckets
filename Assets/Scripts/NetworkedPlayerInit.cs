@@ -23,7 +23,7 @@ public class NetworkedPlayerInit : MonoBehaviour
 
     Vector3 startPosition;
 
-    int delayTickTime = 50;
+    int delayTickTime = 100;
     int delayTime = 0;
     bool delayFlag;
 
