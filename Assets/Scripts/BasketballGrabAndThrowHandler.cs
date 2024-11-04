@@ -159,10 +159,10 @@ public class BasketballGrabAndThrowHandler : MonoBehaviour
         Debug.Log("processedPlayerMagnitude: " + playerMagnitude);
 
         // The last frame of velocity again to give even more weight to it. 
-        Vector3 lastFrameVelocity = lastFrameAdded;
+        //Vector3 lastFrameVelocity = lastFrameAdded;
 
         // This should give the ball some player 
-        Vector3 newProcessedVelocity = ((processedFrameVelocity + processedPlayerVelocity) + lastFrameVelocity) / 2;
+        Vector3 newProcessedVelocity = (processedFrameVelocity + processedPlayerVelocity);
 
         return newProcessedVelocity;
     }
